@@ -3,16 +3,23 @@ import './BusinessList.css';
 import Business from '../Business/Business';
 
 class BusinessList extends Component {
+	
 	render() {
-		return (
-			<div className="BusinessList">
-			  {
-			  	this.props.businesses.map(business=>{
-			  		return <Business business={business}/>;
-			  	})
-			  }
-			</div>
-		);
+		let toRender =''
+		if (this.props.businesses !== undefined){
+			toRender = (
+				<div className="BusinessList">
+					{
+						this.props.businesses.map(business=>{
+							return <Business business={business} key={business}/>;
+						})
+					}
+				</div>
+			);
+		} else {
+			toRender = <h1>Could not find Data</h1>
+		}
+		return toRender
 	}
 }
 
