@@ -3,6 +3,8 @@
 
 View the app live at (Ravenous)[https://spanaik.github.io/Ravenous]
 
+Look at the source code under the master branch.
+
 Add your Yelp apiKey under the src/util/Yelp.js.
 
 Get your apiKey from Yelp here https://www.yelp.com/developers/v3/manage_app
