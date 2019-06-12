@@ -1,5 +1,7 @@
 
-## This is a Nice Wrapper for Yelp written using React
+## This is a Nice Wrapper for Yelp written using React using the create-react-app
+
+View the app live at (Ravenous)[https://spanaik.github.io/Ravenous]
 
 Add your Yelp apiKey under the src/util/Yelp.js.
 

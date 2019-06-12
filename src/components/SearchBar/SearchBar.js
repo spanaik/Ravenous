@@ -28,7 +28,13 @@ class SearchBar extends Component {
 	handleSortByChange(sortByOption) {
 		this.setState({
 			sortBy: sortByOption
-		});
+		}, () => 
+			{
+				if (this.state.term && this.state.location) {
+					this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy)
+				}
+			}
+		);
 	};
 	
 	handleTermChange(event) {
@@ -44,8 +50,8 @@ class SearchBar extends Component {
 	};
 
 	handleSearch(event){
-		this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
 		event.preventDefault()
+		this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
 	}
 
 	renderSortByOptions() {
@@ -72,7 +78,7 @@ class SearchBar extends Component {
 		    <input placeholder="Where?" onChange={this.handleLocationChange}/>
 		  </div>
 		  <div className="SearchBar-submit">
-		    <a onClick={this.handleSearch}>Let's Go</a>
+		    <a onClick={this.handleSearch} href="deadlink">Let's Go</a>
 		  </div>
 		</div>
 		)

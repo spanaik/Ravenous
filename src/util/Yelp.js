@@ -1,4 +1,4 @@
-const apiKey = 'xxx';
+const apiKey = "XXXX";
 
 const Yelp = {
     search : (term, location, sortBy) => {
